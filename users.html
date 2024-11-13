@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="/asset/styles/master.css">
+    <script src="/asset/js/jquery-3.7.1.min.js"></script>
+    <script src="/asset/js/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+    <main class="dashboard">
+        <!-- Inicio barra de navegacion -->
+        <nav class="sidebar " id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-item">
+                    Inicio
+                </div>
+                <div class="sidebar-item">
+                    Usuarios
+                    <div class="submenu">
+                        <div class="submenu-item">Crear</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <a href="materias.html">Materias</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Fin barra de navegacion -->
+
+        <!-- Inicio contenido principal -->
+        <div class="main-content" id="main-content">
+            <!-- Inicio contenido cabecera -->
+            <header class="header">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <div class="header-title">Módulo Usuarios</div>
+                <div class="user-info">
+                    <img src="/asset/img/photo.png" class="user-photo" id="user-photo" alt="">
+                    <div class="dropdown" id="dropdown">
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" id="name-log">Nombre del usuario</button>
+                            <button class="dropdown-item">Perfil</button>
+                            <button class="dropdown-item" id="logout-btn">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Fin contenido cabecera -->
+
+            <!-- Inicio área de contenido -->
+            <div class="content">
+                <!-- Aqui van listadas las tarjetas -->
+                <!-- Fin listado de las tarjetas -->
+
+                <!-- Inicio modal crear -->
+                <div class="modal-create" id="modal-create">
+                    <div class="modal-content">
+                        <span class="close-btn" id="close-btn-create">&times;</span>
+                        <h2>Formulario crear</h2>
+                        <form id="formCreate">
+                            <input type="text" name="nombre" placeholder="Ingrese su nombre">
+                            <input type="text" name="apellido" placeholder="Ingrese su apellido">
+                            <input type="email" name="email" placeholder="tunombre@gmail.com">
+                            <input type="password" name="contrasena" placeholder="Ingrese su contraseña">
+                            <input type="number" name="documento" placeholder="Ingrese su documento">
+                            <select name="rol">
+                                <option value="Usuario" selected>Usuario</option>
+                                <option value="Usuario">Administrador</option>
+                            </select>
+                            <input type="text" name="estado" value="Activo" hidden>
+                            <button type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin modales -->
+
+                <!-- Inicio modal editar -->
+                <div class="modal-edit" id="modal-edit">
+                    <div class="modal-content">
+                        <span class="close-btn-edit" id="close-btn-edit">&times;</span>
+                        <h2>Formulario editar</h2>
+                        <form id="formEdit">
+                            <input type="text" name="editNombre" id="editID" hidden>
+
+                            <div>
+                                <label for="editNombre">
+                                    <input type="text" name="nombre" id="editNombre" placeholder="Ingrese su nombre">
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="editApellido">
+                                    <input type="text" name="apellido" id="editApellido"
+                                        placeholder="Ingrese su apellido">
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="editEmail"></label>
+                                <input type="email" name="email" id="editEmail" placeholder="tunombre@gmail.com">
+                            </div>
+
+                            <div>
+                                <label for="editContrasena"></label>
+                                <input type="password" name="contrasena" id="editContrasena"
+                                    placeholder="Ingrese su contraseña">
+                            </div>
+
+                            <div>
+                                <label for="editDocumento"></label>
+                                <input type="number" name="documento" id="editDocumento"
+                                    placeholder="Ingrese su documento">
+                            </div>
+
+                            <input type="text" name="rol" value="Usuario">
+
+                            <input type="text" name="estado" value="Activo">
+
+                            <div class="modal-actions">
+                                <button class="save-btn">Actualizar</button>
+                                <button class="cancel-btn">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin modal editar -->
+
+            </div>
+            <!-- Fin área de contenido -->
+
+        </div>
+        <!-- Fin  contenido principal -->
+    </main>
+</body>
+<script src="/asset/js/users.js"></script>
+<script src="/asset/js/script.js"></script>
+
+</html>

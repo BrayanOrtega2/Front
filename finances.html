@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzas</title>
+    <link rel="stylesheet" href="/asset/styles/master.css">
+    <script src="/asset/js/jquery-3.7.1.min.js"></script>
+    <script src="/asset/js/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+    <main class="dashboard">
+        <!-- Inicio barra de navegacion -->
+        <nav class="sidebar " id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-item">
+                    Inicio
+                </div>
+                <div class="sidebar-item">
+                    <a href="users.html">Usuarios</a>
+                </div>
+                <div class="sidebar-item">
+                    Finanzas
+                    <div class="submenu">
+                        <div class="submenu-item">Crear</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <a href="dates.html">Fechas</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Fin barra de navegacion -->
+
+        <!-- Inicio contenido principal -->
+        <div class="main-content" id="main-content">
+            <!-- Inicio contenido cabecera -->
+            <header class="header">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <div class="header-title">Módulo Finanzas</div>
+                <div class="user-info">
+                    <img src="/asset/img/no-photo.png" class="user-photo" id="user-photo" alt="">
+                    <div class="dropdown" id="dropdown">
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" id="name-log">Nombre del usuario</button>
+                            <button class="dropdown-item">Perfil</button>
+                            <button class="dropdown-item" id="logout-btn">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Fin contenido cabecera -->
+
+            <!-- Inicio área de contenido -->
+            <div class="content">
+                <!-- Aqui van listadas las tarjetas -->
+                <!-- Fin listado de las tarjetas -->
+
+                <!-- Inicio modal crear -->
+                <div class="modal-create" id="modal-create">
+                    <div class="modal-content">
+                        <span class="close-btn" id="close-btn-create">&times;</span>
+                        <h2>Formulario crear</h2>
+                        <form id="formCreate">
+                            <input type="number" name="income" placeholder="Ingresos mensuales">
+                            <input type="number" name="fixedExpenses" placeholder="Valor de los gastos fijos mensuales">
+                            <input type="number" name="variableExpenses"
+                                placeholder="Valor de los gastos variables mensuales">
+                            <input type="number" name="savingsPlan" placeholder="Cantidad que quiere ahorrar en el mes">
+                            <button type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin modales -->
+
+                <!-- Inicio modal editar -->
+                <div class="modal-edit" id="modal-edit">
+                    <div class="modal-content">
+                        <span class="close-btn-edit" id="close-btn-edit">&times;</span>
+                        <h2>Formulario editar</h2>
+                        <form id="formEdit">
+                            <input type="number" name="editIncome" id="editId" hidden>
+
+                            <div>
+                                <label for="editIncome"></label>
+                                <input type="number" name="income" id="editIncome" placeholder="Ingresos mensuales">
+                            </div>
+
+                            <div>
+                                <label for="editFixedExpenses">
+                                    <input type="number" name="fixedExpenses" id="editFixedExpenses"
+                                        placeholder="Valor de los gastos fijos mensuales">
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="editVariableExpenses"></label>
+                                <input type="number" name="variableExpenses" id="editVariableExpenses"
+                                    placeholder="Valor de los gastos variables mensuales">
+                            </div>
+
+                            <div>
+                                <label for="editSavingsPlan"></label>
+                                <input type="number" name="savingsPlan" id="editSavingsPlan"
+                                    placeholder="Cantidad que quiere ahorrar en el mes">
+                            </div>
+
+                            <div class="modal-actions">
+                                <button class="save-btn">Actualizar</button>
+                                <button class="cancel-btn">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin modal editar -->
+
+            </div>
+            <!-- Fin área de contenido -->
+
+        </div>
+        <!-- Fin  contenido principal -->
+    </main>
+</body>
+<script src="/asset/js/finances.js"></script>
+
+</html>

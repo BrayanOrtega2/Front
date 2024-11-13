@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/asset/img/fondo5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main.register {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 5 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    width: 300px;
+    text-align: center; /* Centrado del texto */
+    text-shadow: #333;
+}
+
+main.login {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 5 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    width: 300px;
+    text-align: center; /* Centrado del texto */
+    text-shadow: #333;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+input:focus, select:focus {
+    border-color: #83dcad;
+    outline: none;
+}
+
+button {
+    background-color: #73c097;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #83dcad;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+input[id="contraseña"] {
+    letter-spacing: 0.4em; /* Espaciado de caracteres para mayor seguridad */
+}
